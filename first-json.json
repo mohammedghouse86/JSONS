@@ -1,0 +1,32 @@
+{
+  "Query": {
+    "hello": "String",
+    "user(id: ID!)": "User",
+    "posts": "[Post!]"
+  },
+  "Mutation": {
+    "createUser(input: CreateUserInput!)": "User",
+    "createPost(input: CreatePostInput!)": "Post"
+  },
+  "User": {
+    "id": "ID!",
+    "name": "String!",
+    "email": "String!",
+    "posts": "[Post!]"
+  },
+  "Post": {
+    "id": "ID!",
+    "title": "String!",
+    "content": "String!",
+    "author": "User!"
+  },
+  "CreateUserInput": {
+    "name": "String!",
+    "email": "String!"
+  },
+  "CreatePostInput": {
+    "title": "String!",
+    "content": "String!",
+    "authorId": "ID!"
+  }
+}
